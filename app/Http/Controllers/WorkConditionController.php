@@ -37,14 +37,14 @@ class WorkConditionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'work_conditions_name' => 'required',
+            'WC_description' => 'required',
         ]);
 
         
         $workCondition = new WorkCondition();
-        $workCondition->name = $request->name;
-        $workCondition->description = $request->description;
+        $workCondition->work_conditions_name = $request->work_conditions_name;
+        $workCondition->WC_description = $request->WC_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 
@@ -73,13 +73,13 @@ class WorkConditionController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'work_conditions_name' => 'required',
+            'WC_description' => 'required',
         ]);
 
         $workCondition = WorkCondition::findOrFail($id);
-        $workCondition->name = $request->name;
-        $workCondition->description = $request->description;
+        $workCondition->work_conditions_name = $request->work_conditions_name;
+        $workCondition->WC_description = $request->WC_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 

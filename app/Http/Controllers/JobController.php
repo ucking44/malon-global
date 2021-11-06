@@ -22,8 +22,8 @@ class JobController extends Controller
                     ->join('categories', 'jobs.category_id', '=', 'categories.id')
                     ->join('job_types', 'jobs.jobType_id', '=', 'job_types.id')
                     ->join('work_conditions', 'jobs.workCondition_id', '=', 'work_conditions.id')
-                    ->select('jobs.*', 'categories.name', 'job_types.name', 'work_conditions.name')
-                    ->paginate(5);
+                    ->select('jobs.*', 'categories.category_name', 'job_types.job_type_name', 'work_conditions.work_conditions_name')
+                    ->simplePaginate(5);
 
         return response()->json([
             'data' => $jobs,

@@ -14,8 +14,8 @@ class Category extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name',
-        'description',
+        'category_name',
+        'C_description',
     ];
 
     public function job()

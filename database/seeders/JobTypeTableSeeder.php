@@ -17,33 +17,33 @@ class JobTypeTableSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         JobType::create([
-            'name' => 'Full-time',
-            'description' => 'Full time job',
+            'job_type_name' => 'Full-time',
+            'JT_description' => 'Full time job',
         ]);
 
         JobType::create([
-            'name' => 'Temporary',
-            'description' => 'Temporary job',
+            'job_type_name' => 'Temporary',
+            'JT_description' => 'Temporary job',
         ]);
 
         JobType::create([
-            'name' => 'Contract',
-            'description' => 'Contract job',
+            'job_type_name' => 'Contract',
+            'JT_description' => 'Contract job',
         ]);
 
         JobType::create([
-            'name' => 'Permanent',
-            'description' => 'Permanent job',
+            'job_type_name' => 'Permanent',
+            'JT_description' => 'Permanent job',
         ]);
 
         JobType::create([
-            'name' => 'Internship',
-            'description' => 'Internship job',
+            'job_type_name' => 'Internship',
+            'JT_description' => 'Internship job',
         ]);
 
         JobType::create([
-            'name' => 'Volunteer',
-            'description' => 'Volunteer job',
+            'job_type_name' => 'Volunteer',
+            'JT_description' => 'Volunteer job',
         ]);
 
     }

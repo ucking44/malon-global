@@ -37,14 +37,14 @@ class JobTypeController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'job_type_name' => 'required',
+            'JT_description' => 'required',
         ]);
 
         
         $jobType = new JobType();
-        $jobType->name = $request->name;
-        $jobType->description = $request->description;
+        $jobType->job_type_name = $request->job_type_name;
+        $jobType->JT_description = $request->JT_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 
@@ -73,13 +73,13 @@ class JobTypeController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'job_type_name' => 'required',
+            'JT_description' => 'required',
         ]);
 
         $jobType = JobType::findOrFail($id);
-        $jobType->name = $request->name;
-        $jobType->description = $request->description;
+        $jobType->job_type_name = $request->job_type_name;
+        $jobType->JT_description = $request->JT_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 

@@ -38,14 +38,14 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'category_name' => 'required',
+            'C_description' => 'required',
         ]);
 
         
         $jobCat = new Category();
-        $jobCat->name = $request->name;
-        $jobCat->description = $request->description;
+        $jobCat->category_name = $request->category_name;
+        $jobCat->C_description = $request->C_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 
@@ -74,13 +74,13 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'description' => 'required',
+            'category_name' => 'required',
+            'C_description' => 'required',
         ]);
 
         $jobCat = Category::findOrFail($id);
-        $jobCat->name = $request->name;
-        $jobCat->description = $request->description;
+        $jobCat->category_name = $request->category_name;
+        $jobCat->C_description = $request->C_description;
         
         if(JWTAuth::user()->usertype == 'admin')
 

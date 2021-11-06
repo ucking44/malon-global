@@ -17,18 +17,18 @@ class WorkConditionTableSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         WorkCondition::create([
-            'name' => 'Remote',
-            'description' => 'Remote job',
+            'work_conditions_name' => 'Remote',
+            'WC_description' => 'Remote job',
         ]);
 
         WorkCondition::create([
-            'name' => 'Part Remote',
-            'description' => 'Part Remote job',
+            'work_conditions_name' => 'Part Remote',
+            'WC_description' => 'Part Remote job',
         ]);
 
         WorkCondition::create([
-            'name' => 'On-Premise',
-            'description' => 'On-Premise job',
+            'work_conditions_name' => 'On-Premise',
+            'WC_description' => 'On-Premise job',
         ]);
 
     }

@@ -19,10 +19,11 @@ class CreateJobsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('jobType_id');
             $table->unsignedBigInteger('workCondition_id');
+            $table->timestamps();
+
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('jobType_id')->references('id')->on('job_types')->onDelete('cascade');
             $table->foreign('workCondition_id')->references('id')->on('work_conditions')->onDelete('cascade');
-            $table->timestamps();
 
         });
     }

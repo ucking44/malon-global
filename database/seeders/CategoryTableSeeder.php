@@ -17,31 +17,30 @@ class CategoryTableSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
 
-        //$password = Hash::make('password');
-
         Category::create([
-            'name' => 'Tech',
-            'description' => 'Tech department',
+            'category_name' => 'Tech',
+            'C_description' => 'Tech department',
         ]);
 
         Category::create([
-            'name' => 'Health Care',
-            'description' => 'Health care department',
+            'category_name' => 'Health Care',
+            'C_description' => 'Health care department',
         ]);
 
         Category::create([
-            'name' => 'Hospitality',
-            'description' => 'Hospitality department',
+            'category_name' => 'Hospitality',
+            'C_description' => 'Hospitality department',
         ]);
 
         Category::create([
-            'name' => 'Customer Service',
-            'description' => 'Customer Service department',
+            'category_name' => 'Customer Service',
+            'C_description' => 'Customer Service department',
         ]);
 
         Category::create([
-            'name' => 'Marketing',
-            'description' => 'Marketing department',
+            'category_name' => 'Marketing',
+            'C_description' => 'Marketing department',
         ]);
     }
 }
+

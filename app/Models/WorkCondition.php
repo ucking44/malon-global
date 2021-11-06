@@ -14,8 +14,8 @@ class WorkCondition extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name',
-        'description',
+        'work_conditions_name',
+        'WC_description',
     ];
 
     public function job()

@@ -14,8 +14,8 @@ class JobType extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name',
-        'description',
+        'job_type_name',
+        'JT_description',
     ];
 
     public function job()

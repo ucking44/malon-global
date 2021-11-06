@@ -15,8 +15,8 @@ class CreateWorkConditionsTable extends Migration
     {
         Schema::create('work_conditions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->longText('description');
+            $table->string('work_conditions_name');
+            $table->longText('WC_description');
             $table->timestamps();
         });
     }
